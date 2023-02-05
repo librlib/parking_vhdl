@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.1 (64-bit)
+# SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
+# IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
+# Start of session at: Sun Feb  5 23:03:43 2023
+# Process ID: 10300
+# Current directory: G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.runs/synth_1
+# Command line: vivado.exe -log tick_10ms.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source tick_10ms.tcl
+# Log file: G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.runs/synth_1/tick_10ms.vds
+# Journal file: G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source tick_10ms.tcl -notrace

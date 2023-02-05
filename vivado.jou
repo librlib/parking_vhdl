@@ -1,0 +1,93 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.1 (64-bit)
+# SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
+# IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
+# Start of session at: Sun Feb  5 20:20:55 2023
+# Process ID: 16636
+# Current directory: G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11772 G:\Mon Drive\EcoleInge\CPE-4A\Cours\S8\sys_numeriques\parking\src\src.xpr
+# Log file: G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/vivado.log
+# Journal file: G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.xpr}
+update_compile_order -fileset sources_1
+file mkdir G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.srcs/sim_1/new
+file mkdir G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.srcs/sim_1/new
+file mkdir G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.srcs/sim_1/new
+file mkdir G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.srcs/sim_1/new
+file mkdir G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+file mkdir G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.srcs/sim_1/new
+file mkdir {G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.srcs/sim_1/new}
+close [ open {G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.srcs/sim_1/new/anti_rebond_tb.vhd} w ]
+add_files -fileset sim_1 {{G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.srcs/sim_1/new/anti_rebond_tb.vhd}}
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+file mkdir G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.srcs/sources_1/new
+file mkdir G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.srcs/sources_1/new
+file mkdir G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.srcs/sources_1/new
+file mkdir G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.srcs/sources_1/new
+file mkdir G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.srcs/sources_1/new
+file mkdir G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.srcs/sources_1/new
+file mkdir {G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.srcs/sources_1/new}
+close [ open {G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.srcs/sources_1/new/tick_10ms.vhd} w ]
+add_files {{G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.srcs/sources_1/new/tick_10ms.vhd}}
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files {{G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.srcs/sources_1/new/tick_10ms.vhd}}] -no_script -reset -force -quiet
+remove_files  {{G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.srcs/sources_1/new/tick_10ms.vhd}}
+file delete -force {G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.srcs/sources_1/new/tick_10ms.vhd}
+close [ open {G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.srcs/sources_1/new/clk_10ms.vhd} w ]
+add_files {{G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.srcs/sources_1/new/clk_10ms.vhd}}
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top clk_10ms [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top clk_10ms [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+synth_design -rtl -name rtl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+reset_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1

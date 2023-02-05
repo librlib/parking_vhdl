@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.2.1 (64-bit)
+# SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
+# IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
+# Start of session at: Sun Feb  5 22:09:43 2023
+# Process ID: 5700
+# Current directory: G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.sim/sim_1/behav/xsim/xsim.dir/clk_10ms_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: G:/Mon Drive/EcoleInge/CPE-4A/Cours/S8/sys_numeriques/parking/src/src.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source G:/Mon -notrace
