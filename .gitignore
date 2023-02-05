@@ -1,0 +1,22 @@
+# Ignore everything
+*
+
+# But not these files...
+
+# User constraints
+!.xdc
+# Source code
+!.vhd
+# Vivado project file
+!.xpr
+
+!.pdf
+!.gitignore
+
+# etc...
+
+# ...even if they are in subdirectories
+!*/
+
+# if the files to be tracked are in subdirectories
+#!*/a/b/file1.txt
