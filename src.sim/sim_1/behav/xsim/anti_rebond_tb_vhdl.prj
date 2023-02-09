@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../src.srcs/sources_1/new/anti_rebond.vhd" \
+"../../../../src.srcs/sources_1/new/anti_rebond_fsm.vhd" \
+"../../../../src.srcs/sim_1/new/anti_rebond_tb.vhd" \
+
+# Do not sort compile order
+nosort

@@ -33,6 +33,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity anti_rebond_fsm is
     Port ( clk : in STD_LOGIC;
+           rst : in STD_LOGIC;
            sw : in STD_LOGIC;
            m_tick : in STD_LOGIC;
            db : out STD_LOGIC);
@@ -48,51 +49,69 @@ architecture Behavioral of anti_rebond_fsm is
 begin
 
     --State Register:
-    SR_PROC : process (clk)
+    SR_PROC : process (clk,rst)
     begin
     
-        if rising_edge(clk) then
+        if rst='1' then
+            current_state <= zero;
+        elsif rising_edge(clk) then
             current_state <= next_state;
         end if;
     
     end process;
     
     --Combinational for Next State and Logic for Output:
-    CLNSO_PROC : process (clk)
+    CLNSO_PROC : process (m_tick,sw, current_state)
     begin
-        
+        next_state <= current_state;    
     case current_state is
         when zero =>
             db_out <= '0';
             if ( sw='1' ) then
                 next_state <= wait1_1;
+            else
+                next_state <= zero;
             end if;
         when wait1_1 =>
             db_out <= '0';
             if ( sw='0' ) then
                 next_state <= zero;
-            elsif ( m_tick='1' ) then
-                next_state <= wait1_2;
+            else
+                if ( m_tick='1' ) then
+                    next_state <= wait1_2;
+                else 
+                    next_state <= wait1_1;
+                end if;
             end if;
         when wait1_2 =>
             db_out <= '0';
             if ( sw='0' ) then
                 next_state <= zero;
-            elsif ( m_tick='1' ) then
-                next_state <= wait1_3;
+            else
+                if ( m_tick='1' ) then
+                    next_state <= wait1_3;
+                else
+                    next_state <= wait1_2;
+                end if;
             end if;
         when wait1_3 =>
             db_out <= '0';
             if ( sw='0' ) then
                 next_state <= zero;
-            elsif ( m_tick='1' ) then
-                next_state <= one;
+            else
+                if ( m_tick='1' ) then
+                    next_state <= one;
+                else
+                    next_state <= wait1_3;
+                end if;
             end if;
             
         when one =>
             db_out <= '1';
             if ( sw='0' ) then
                 next_state <= wait0_1;
+            else
+                next_state <= one;
             end if;
         when wait0_1 =>
             db_out <= '1';
@@ -100,20 +119,30 @@ begin
                 next_state <= one;
             elsif ( m_tick='1' ) then
                 next_state <= wait0_2;
+            else
+                next_state <= wait0_1;
             end if;
         when wait0_2 =>
             db_out <= '1';
             if ( sw='1' ) then
                 next_state <= one;
-            elsif ( m_tick='1' ) then
-                next_state <= wait0_3;
+            else
+                if ( m_tick='1' ) then
+                    next_state <= wait0_3;
+                else
+                    next_state <= wait0_2;
+                end if;
             end if;
         when wait0_3 =>
             db_out <= '1';
             if ( sw='1' ) then
                 next_state <= one;
-            elsif ( m_tick='1' ) then
-                next_state <= wait0_2;
+            else
+                if ( m_tick='1' ) then
+                    next_state <= zero;
+                else
+                    next_state <= wait0_3;
+                end if;
             end if;
     end case;
         

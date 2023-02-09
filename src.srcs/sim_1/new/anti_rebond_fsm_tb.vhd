@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 09.02.2023 15:37:22
+-- Create Date: 09.02.2023 14:55:46
 -- Design Name: 
--- Module Name: anti_rebond_tb - Behavioral
+-- Module Name: anti_rebond_fsm_tb - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,31 +31,30 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity anti_rebond_tb is
+entity anti_rebond_fsm_tb is
 --  Port ( );
-end anti_rebond_tb;
+end anti_rebond_fsm_tb;
 
-architecture Behavioral of anti_rebond_tb is
+architecture Behavioral of anti_rebond_fsm_tb is
 
-    component anti_rebond is
+    component anti_rebond_fsm is
         Port ( clk : in STD_LOGIC;
                rst : in STD_LOGIC;
-               m_tick_10ms : in STD_LOGIC;
-               lines : in STD_LOGIC_VECTOR (3 downto 0);
-               lines_out : out STD_LOGIC_VECTOR (3 downto 0));
+               sw : in STD_LOGIC;
+               m_tick : in STD_LOGIC;
+               db : out STD_LOGIC);
     end component;
     
-    signal clk,rst,m_tick : std_logic := '0';
-    signal lines,lines_out : std_logic_vector (3 downto 0) := "0000";
+    signal clk,rst,sw,m_tick,db : std_logic := '0';
 
 begin
 
-    uut1: anti_rebond port map(
+    uut1: anti_rebond_fsm port map(
         clk => clk,
         rst => rst,
-        lines => lines,
-        m_tick_10ms => m_tick,
-        lines_out => lines_out
+        sw => sw,
+        m_tick => m_tick,
+        db => db
     );
 
     clk_proc : process -- 100Mhz clock
@@ -83,39 +82,39 @@ begin
         m_tick <= '0';
         wait for 10 ms - 10 ns;    
     end process;
-        
+    
     sw_proc : process
     begin
         wait for 15 ns;
     
-        lines <= "1111";
+        sw <= '1';
         wait for 1 ms;
-        lines <= "0000";
+        sw <= '0';
         wait for 1 ms;
         
-        lines <= "1111";
+        sw <= '1';
         wait for 5 ms;
-        lines <= "0000";
+        sw <= '0';
         wait for 5 ms;
         
-        lines <= "1111";
+        sw <= '1';
         wait for 10 ms;
-        lines <= "0000";
+        sw <= '0';
         wait for 10 ms;
         
-        lines <= "1111";
+        sw <= '1';
         wait for 15 ms;
-        lines <= "0000";
+        sw <= '0';
         wait for 15 ms;
         
-        lines <= "1111";
+        sw <= '1';
         wait for 20 ms;
-        lines <= "0000";
+        sw <= '0';
         wait for 20 ms;
         
-        lines <= "1111";
+        sw <= '1';
         wait for 30 ms;
-        lines <= "0000";
+        sw <= '0';
         wait for 30 ms;
     end process;
 

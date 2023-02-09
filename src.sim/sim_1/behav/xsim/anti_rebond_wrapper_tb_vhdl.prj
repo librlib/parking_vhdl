@@ -1,0 +1,18 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../src.srcs/sources_1/new/anti_rebond_fsm.vhd" \
+"../../../../src.ip_user_files/bd/anti_rebond/ip/anti_rebond_anti_rebond_fsm_0_0/anti_rebond_anti_rebond_fsm_0_0_sim_netlist.vhdl" \
+"../../../../src.ip_user_files/bd/anti_rebond/ip/anti_rebond_anti_rebond_fsm_0_1/anti_rebond_anti_rebond_fsm_0_1_sim_netlist.vhdl" \
+"../../../../src.ip_user_files/bd/anti_rebond/ip/anti_rebond_anti_rebond_fsm_0_2/anti_rebond_anti_rebond_fsm_0_2_sim_netlist.vhdl" \
+"../../../../src.ip_user_files/bd/anti_rebond/ip/anti_rebond_anti_rebond_fsm_0_3/anti_rebond_anti_rebond_fsm_0_3_sim_netlist.vhdl" \
+"../../../../src.ip_user_files/bd/anti_rebond/ip/anti_rebond_xlconcat_0_0/anti_rebond_xlconcat_0_0_sim_netlist.vhdl" \
+"../../../../src.ip_user_files/bd/anti_rebond/ip/anti_rebond_xlslice_0_0/anti_rebond_xlslice_0_0_sim_netlist.vhdl" \
+"../../../../src.ip_user_files/bd/anti_rebond/ip/anti_rebond_xlslice_0_1/anti_rebond_xlslice_0_1_sim_netlist.vhdl" \
+"../../../../src.ip_user_files/bd/anti_rebond/ip/anti_rebond_xlslice_0_2/anti_rebond_xlslice_0_2_sim_netlist.vhdl" \
+"../../../../src.ip_user_files/bd/anti_rebond/ip/anti_rebond_xlslice_0_3/anti_rebond_xlslice_0_3_sim_netlist.vhdl" \
+"../../../../src.ip_user_files/bd/anti_rebond/sim/anti_rebond.vhd" \
+"../../../../src.srcs/sources_1/bd/anti_rebond/hdl/anti_rebond_wrapper.vhd" \
+"../../../../src.srcs/sources_1/new/anti_rebond_wrapper_tb.vhd" \
+
+# Do not sort compile order
+nosort
