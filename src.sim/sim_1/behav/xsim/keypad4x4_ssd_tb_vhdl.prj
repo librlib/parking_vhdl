@@ -1,0 +1,17 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../src.srcs/sources_1/new/anti_rebond.vhd" \
+"../../../../src.srcs/sources_1/new/anti_rebond_fsm.vhd" \
+"../../../../src.srcs/sources_1/new/code_buff.vhd" \
+"../../../../src.srcs/sources_1/new/control_7seg.vhd" \
+"../../../../src.srcs/sources_1/new/counter_2b.vhd" \
+"../../../../src.srcs/sources_1/new/detect_sw.vhd" \
+"../../../../src.srcs/sources_1/new/keypad4x4_ssd.vhd" \
+"../../../../src.srcs/sources_1/new/sequence_fsm.vhd" \
+"../../../../src.srcs/sources_1/new/tick_10ms.vhd" \
+"../../../../src.srcs/sources_1/new/transcode2b_4.vhd" \
+"../../../../src.srcs/sources_1/new/transcode4b_7seg.vhd" \
+"../../../../src.srcs/sim_1/new/keypad4x4_ssd_tb.vhd" \
+
+# Do not sort compile order
+nosort

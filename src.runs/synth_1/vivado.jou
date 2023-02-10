@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.1 (64-bit)
+# SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
+# IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
+# Start of session at: Fri Feb 10 12:22:09 2023
+# Process ID: 12876
+# Current directory: C:/Users/kristoballl1618/Documents/4ETI/sys_numerique/parking_vhdl/src.runs/synth_1
+# Command line: vivado.exe -log code_buff.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source code_buff.tcl
+# Log file: C:/Users/kristoballl1618/Documents/4ETI/sys_numerique/parking_vhdl/src.runs/synth_1/code_buff.vds
+# Journal file: C:/Users/kristoballl1618/Documents/4ETI/sys_numerique/parking_vhdl/src.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source code_buff.tcl -notrace
